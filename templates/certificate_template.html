@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo-text {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 48px;
+            color: #702283;
+            margin: 0;
+        }
+        
+        .logo-subtext {
+            font-size: 16px;
+            letter-spacing: 6px;
+            margin-top: 0;
+        }
+        
+        .rainbow-icon {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .certificate-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        
+        .content {
+            text-align: left;
+            margin: 30px 0;
+            font-size: 18px;
+        }
+        
+        .signature {
+            margin-top: 60px;
+            text-align: left;
+        }
+        
+        .signature img {
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+        
+        .signatory {
+            font-weight: bold;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-text">Rosemallow</span>
+            <span class="rainbow-icon">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                    <path d="M50,20 Q70,5 85,25 Q95,40 80,55 Q65,70 50,60 Q35,70 20,55 Q5,40 15,25 Q30,5 50,20" fill="#4a86e8"/>
+                    <path d="M50,25 Q65,15 75,30 Q83,40 72,52 Q60,63 50,55 Q40,63 28,52 Q17,40 25,30 Q35,15 50,25" fill="#ff6d60"/>
+                    <path d="M50,30 Q60,23 67,33 Q73,42 65,50 Q57,58 50,52 Q43,58 35,50 Q27,42 33,33 Q40,23 50,30" fill="#ffda77"/>
+                    <path d="M50,35 Q55,30 60,37 Q64,43 58,48 Q53,53 50,48 Q47,53 42,48 Q36,43 40,37 Q45,30 50,35" fill="#69b578"/>
+                </svg>
+            </span>
+            <p class="logo-subtext">TECHNOLOGIES</p>
+        </div>
+        
+        <h1 class="certificate-title">EXPERIENCE CERTIFICATE</h1>
+        
+        <div class="content">
+            This is to certify that <b>{{ name }}</b> was employed with Rosemallow Technologies as a <b>{{ role }}</b> from <b>{{ joining_year }}</b> to <b>{{ relieving_year }}</b>.<br><br>
+            During {% if gender == 'Male' %}his{% else %}her{% endif %} employment with us, {% if gender == 'Male' %}he{% else %}she{% endif %} has shown {% if gender == 'Male' %}himself{% else %}herself{% endif %} to be a dedicated and skilled professional. {% if gender == 'Male' %}His{% else %}Her{% endif %} performance was satisfactory, and {% if gender == 'Male' %}he{% else %}she{% endif %} has made significant contributions to our projects. {{ name }}'s responsibilities included designing, developing, and maintaining software applications.<br><br>
+            We wish {% if gender == 'Male' %}him{% else %}her{% endif %} all the best in {% if gender == 'Male' %}his{% else %}her{% endif %} future endeavors.
+        </div>
+        
+        <div class="signature">
+            <p>Sincerely,</p>
+            <svg width="160" height="60" viewBox="0 0 160 60">
+                <path d="M10,40 C20,20 30,50 40,30 C50,10 60,40 80,20 C100,0 120,30 140,10" stroke="#000" fill="none" stroke-width="2"/>
+            </svg>
+            <p class="signatory">Authorized Signatory</p>
+        </div>
+        
+        <div class="footer">
+            <p>Chennai, March 15, 2023</p>
+        </div>
+    </div>
+</body>
+</html>
