@@ -18,13 +18,17 @@ def form():
         gender = request.form["gender"]
         date = datetime.today().strftime('%d %B %Y')
 
+        logo_path = os.path.abspath(os.path.join('static', 'logo.png'))
+        signature_path = os.path.abspath(os.path.join('static', 'signature.png'))
         data = {
             "name": name,
             "role": role,
             "joining_year": joining_year,
             "relieving_year": relieving_year,
             "gender": gender,
-            "date": date
+            "date": date,
+            "logo_path": logo_path.replace("\\", "/"),
+            "signature_path": signature_path.replace("\\", "/")
         }
 
         # Optional: Save to JSON
@@ -37,7 +41,7 @@ def form():
         # Generate PDF
         os.makedirs("output", exist_ok=True)
         file_path = f"output/certificate_{name.replace(' ', '_')}.pdf"
-        HTML(string=rendered_html, base_url='.').write_pdf(file_path)
+        HTML(string=rendered_html, base_url=os.path.abspath(os.path.dirname(__file__))).write_pdf(file_path)
 
         return send_file(file_path, as_attachment=True)
 

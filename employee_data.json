@@ -2,7 +2,9 @@
     "name": "vaseekaran",
     "role": "python intern",
     "joining_year": "2020",
-    "relieving_year": "2030",
+    "relieving_year": "2025",
     "gender": "Male",
-    "date": "25 April 2025"
+    "date": "26 April 2025",
+    "logo_path": "C:/Users/Thols/experience_certificate_app/static/logo.png",
+    "signature_path": "C:/Users/Thols/experience_certificate_app/static/signature.png"
 }
